@@ -54,7 +54,7 @@ export const firstAidGuides: FirstAidGuide[] = [
         'Check if the person is responsive by tapping and shouting.',
         'If unresponsive, call emergency services (or ask someone to).',
         'Place the person on their back on a firm surface.',
-        'Kneel beside the person's chest.',
+        'Kneel beside the person\'s chest.',
         'Place the heel of one hand on the center of the chest, between the nipples.',
         'Place your other hand on top and interlock fingers.',
         'Keep arms straight, position shoulders directly above hands.',
@@ -318,7 +318,7 @@ export const firstAidGuides: FirstAidGuide[] = [
         'Assess the situation: Check for bleeding, deformity, and if the bone is exposed.',
         'Keep the injured person still. Do not move them unless they are in immediate danger.',
         'Stop any bleeding by applying gentle pressure with a clean cloth or sterile bandage.',
-        'Immobilize the injured area: Do not try to realign the bone or push a bone that's sticking out back in.',
+        'Immobilize the injured area: Do not try to realign the bone or push a bone that\'s sticking out back in.',
         'Apply a splint to prevent movement. Use rigid material (board, rolled magazine) padded with cloth.',
         'Extend the splint beyond the joints above and below the fracture.',
         'Secure the splint with bandages, strips of cloth, or tape, but not directly over the injury.',
@@ -382,14 +382,14 @@ export const firstAidGuides: FirstAidGuide[] = [
     steps: {
       en: [
         'Stay calm and time the seizure. Most seizures last 1-3 minutes.',
-        'Make the area safe: Remove dangerous objects and cushion the person's head.',
+        'Make the area safe: Remove dangerous objects and cushion the person\'s head.',
         'Gently roll the person onto their side (recovery position) if possible, to prevent choking.',
         'Do not restrain the person or try to stop their movements.',
-        'Never put anything in the person's mouth. They cannot swallow their tongue.',
+        'Never put anything in the person\'s mouth. They cannot swallow their tongue.',
         'Stay with the person until they are fully conscious and aware.',
         'After the seizure, help the person to a safe resting position and reassure them.',
         'Check if the person is breathing normally after the seizure.',
-        'Call emergency services if: this is the person's first seizure, the seizure lasts more than 5 minutes, the person doesn't regain consciousness, the person is injured, pregnant, or has another seizure soon after the first.',
+        'Call emergency services if: this is the person\'s first seizure, the seizure lasts more than 5 minutes, the person doesn\'t regain consciousness, the person is injured, pregnant, or has another seizure soon after the first.',
         'Document what happened during the seizure to report to medical professionals.'
       ],
       hi: [
@@ -453,7 +453,7 @@ export const firstAidGuides: FirstAidGuide[] = [
         'Loosen any tight clothing, especially around the neck and chest.',
         'If the person is conscious and not allergic to aspirin, have them chew a standard adult aspirin (325 mg) or 4 low-dose (81 mg) aspirins.',
         'If the person becomes unconscious, check for breathing and pulse.',
-        'If there's no pulse, begin CPR immediately if you're trained. Focus on chest compressions.',
+        'If there\'s no pulse, begin CPR immediately if you\'re trained. Focus on chest compressions.',
         'If an Automated External Defibrillator (AED) is available, use it following the instructions.',
         'Keep the person calm and reassure them until emergency help arrives.',
         'Monitor and record vital signs (consciousness, breathing, pulse) to report to emergency responders.'
@@ -519,8 +519,8 @@ export const firstAidGuides: FirstAidGuide[] = [
         'Speech: Ask them to repeat a simple phrase. Is their speech slurred or strange?',
         'Time: If you observe any of these signs, call emergency services immediately. Note the time when symptoms first appeared.',
         'While waiting for help, keep the person calm and comfortable.',
-        'If they're conscious, help them lie down with their head and shoulders slightly elevated.',
-        'If they're unconscious but breathing, place them in the recovery position (on their side).',
+        'If they\'re conscious, help them lie down with their head and shoulders slightly elevated.',
+        'If they\'re unconscious but breathing, place them in the recovery position (on their side).',
         'Do not give them anything to eat or drink.',
         'Monitor and record vital signs (consciousness, breathing, pulse) to report to emergency responders.'
       ],
