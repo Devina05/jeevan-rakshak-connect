@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from "@/contexts/LanguageContext";
-import { FirstAid, Heart, Github, Mail, Phone } from 'lucide-react';
+import { Heart, Github, Mail, Phone, BadgeHelp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
           {/* App Info */}
           <div className="space-y-3">
             <div className="flex items-center">
-              <FirstAid className="h-6 w-6 text-medical-blue mr-2" />
+              <BadgeHelp className="h-6 w-6 text-medical-blue mr-2" />
               <h3 className="text-lg font-bold text-medical-blue">{t('appName')}</h3>
             </div>
             <p className="text-sm text-gray-600">

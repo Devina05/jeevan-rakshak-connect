@@ -13,7 +13,7 @@ import {
   AlarmClock, 
   Stethoscope, 
   Phone, 
-  FirstAid, 
+  Heart, 
   Shield, 
   FileText, 
   Search, 
@@ -35,9 +35,9 @@ const Header = () => {
   // Voice recognition setup
   const startListening = () => {
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      // Type assertion to handle TypeScript issue
-      const recognition = new (SpeechRecognition as any)();
+      const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
+      // Create a new SpeechRecognition instance
+      const recognition = new SpeechRecognitionAPI();
       
       recognition.lang = language === 'en' ? 'en-US' : 
                          language === 'hi' ? 'hi-IN' : 
@@ -108,7 +108,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <FirstAid className="h-8 w-8 text-medical-blue mr-2" />
+            <Heart className="h-8 w-8 text-medical-blue mr-2" />
             <h1 className="text-xl font-bold text-medical-blue">{t('appName')}</h1>
           </div>
 
@@ -124,7 +124,7 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem className="cursor-pointer">
-                  <FirstAid className="mr-2 h-4 w-4" />
+                  <Heart className="mr-2 h-4 w-4" />
                   {t('firstAid')}
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
@@ -246,7 +246,7 @@ const Header = () => {
           <div className="md:hidden py-4 space-y-3 border-t">
             <div className="px-4 py-2 font-medium text-lg">{t('emergencyServices')}</div>
             <a href="#" className="block px-4 py-2 flex items-center hover:bg-gray-100">
-              <FirstAid className="mr-2 h-4 w-4" />
+              <Heart className="mr-2 h-4 w-4" />
               {t('firstAid')}
             </a>
             <a href="#" className="block px-4 py-2 flex items-center hover:bg-gray-100">
