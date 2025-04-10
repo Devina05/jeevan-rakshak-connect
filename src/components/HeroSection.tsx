@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from "@/contexts/LanguageContext";
 import { 
-  BookMedical, 
+  FirstAid, 
   Phone, 
   Stethoscope, 
   Shield, 
@@ -69,7 +69,7 @@ const HeroSection = () => {
             <Card className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-medical-blue">
               <CardContent className="p-6">
                 <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  <BookMedical className="h-6 w-6 text-medical-blue" />
+                  <FirstAid className="h-6 w-6 text-medical-blue" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{t('firstAid')}</h3>
                 <p className="text-gray-500 text-sm mb-2">Quick guides for emergencies</p>

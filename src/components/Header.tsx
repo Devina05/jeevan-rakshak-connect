@@ -13,7 +13,7 @@ import {
   AlarmClock, 
   Stethoscope, 
   Phone, 
-  BookMedical, 
+  FirstAid, 
   Shield, 
   FileText, 
   Search, 
@@ -36,7 +36,8 @@ const Header = () => {
   const startListening = () => {
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const recognition = new SpeechRecognition();
+      // Type assertion to handle TypeScript issue
+      const recognition = new (SpeechRecognition as any)();
       
       recognition.lang = language === 'en' ? 'en-US' : 
                          language === 'hi' ? 'hi-IN' : 
@@ -48,13 +49,13 @@ const Header = () => {
         setIsListening(true);
       };
       
-      recognition.onresult = (event) => {
+      recognition.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
         setSearchQuery(transcript);
         setIsListening(false);
       };
       
-      recognition.onerror = (event) => {
+      recognition.onerror = (event: any) => {
         console.error('Speech recognition error', event.error);
         setIsListening(false);
       };
@@ -107,7 +108,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <BookMedical className="h-8 w-8 text-medical-blue mr-2" />
+            <FirstAid className="h-8 w-8 text-medical-blue mr-2" />
             <h1 className="text-xl font-bold text-medical-blue">{t('appName')}</h1>
           </div>
 
@@ -123,7 +124,7 @@ const Header = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem className="cursor-pointer">
-                  <BookMedical className="mr-2 h-4 w-4" />
+                  <FirstAid className="mr-2 h-4 w-4" />
                   {t('firstAid')}
                 </DropdownMenuItem>
                 <DropdownMenuItem className="cursor-pointer">
@@ -245,7 +246,7 @@ const Header = () => {
           <div className="md:hidden py-4 space-y-3 border-t">
             <div className="px-4 py-2 font-medium text-lg">{t('emergencyServices')}</div>
             <a href="#" className="block px-4 py-2 flex items-center hover:bg-gray-100">
-              <BookMedical className="mr-2 h-4 w-4" />
+              <FirstAid className="mr-2 h-4 w-4" />
               {t('firstAid')}
             </a>
             <a href="#" className="block px-4 py-2 flex items-center hover:bg-gray-100">
