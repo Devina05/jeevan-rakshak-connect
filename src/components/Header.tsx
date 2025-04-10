@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { useLanguage, Language } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -19,11 +19,11 @@ import {
   Search, 
   Mic, 
   Languages, 
-  User,
   Menu,
   X
 } from "lucide-react";
 import { useOffline } from "@/contexts/OfflineContext";
+import UserMenu from "./UserMenu";
 
 const Header = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -193,11 +193,8 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Login/Signup */}
-            <Button variant="ghost" className="flex items-center">
-              <User className="mr-2 h-4 w-4" />
-              {t('login')}/{t('signup')}
-            </Button>
+            {/* User Menu (replaces Login/Signup) */}
+            <UserMenu />
           </nav>
 
           {/* Mobile Menu Button */}
@@ -314,9 +311,17 @@ const Header = () => {
             </a>
             
             <div className="border-t mt-3"></div>
-            <a href="#" className="block px-4 py-2 flex items-center hover:bg-gray-100">
-              <User className="mr-2 h-4 w-4" />
-              {t('login')}/{t('signup')}
+            <a href="#" className="block px-4 py-2 flex items-center hover:bg-gray-100 text-red-500"
+               onClick={(e) => {
+                 e.preventDefault();
+                 // Import and use logout functionality here
+                 const { useAuth } = require("@/contexts/AuthContext");
+                 const { logout } = useAuth();
+                 logout();
+               }}
+            >
+              <LogOut className="mr-2 h-4 w-4" />
+              {t('logout') || 'Logout'}
             </a>
           </div>
         )}
