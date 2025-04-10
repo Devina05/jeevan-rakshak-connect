@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from "@/contexts/LanguageContext";
-import { BookMedical, Heart, Github, Mail, Phone } from 'lucide-react';
+import { Heart, Github, Mail, Phone, Book } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -10,13 +10,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-100 mt-10">
+    <footer className="bg-gradient-to-b from-gray-50 to-gray-100 mt-10">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* App Info */}
           <div className="space-y-3">
             <div className="flex items-center">
-              <BookMedical className="h-6 w-6 text-medical-blue mr-2" />
+              <Book className="h-6 w-6 text-medical-blue mr-2" />
               <h3 className="text-lg font-bold text-medical-blue">{t('appName')}</h3>
             </div>
             <p className="text-sm text-gray-600">
@@ -74,7 +74,7 @@ const Footer = () => {
             <p className="text-sm text-gray-600">
               Save JeevanRakshak on your device to access first aid guides even without internet.
             </p>
-            <Button className="w-full">
+            <Button className="w-full bg-gradient-to-r from-medical-blue to-medical-purple hover:opacity-90">
               Add to Home Screen
             </Button>
           </div>

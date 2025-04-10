@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from "@/contexts/LanguageContext";
 import { 
-  BookMedical, 
+  Book, 
   Phone, 
   Stethoscope, 
   Shield 
@@ -54,7 +54,7 @@ const EmergencyServices = () => {
           <EmergencyCard
             title={t('firstAid')}
             description="Access step-by-step guides for medical emergencies"
-            icon={BookMedical}
+            icon={Book}
             action={handleFirstAid}
             actionText="View Guides"
             type="first-aid"
