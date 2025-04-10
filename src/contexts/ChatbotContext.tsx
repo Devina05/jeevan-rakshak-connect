@@ -1,5 +1,5 @@
 
-import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
+import React, { createContext, useState, useContext, ReactNode } from 'react';
 import { useLanguage } from './LanguageContext';
 
 // Message interface
@@ -90,6 +90,11 @@ export const ChatbotProvider: React.FC<{ children: ReactNode }> = ({ children })
   const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
   const { language, t } = useLanguage();
 
+  // Initialize with welcome message
+  useState(() => {
+    addMessage(t('chatbotWelcome'), 'bot');
+  });
+
   // Add message to chat
   const addMessage = (text: string, sender: 'user' | 'bot') => {
     const newMessage: ChatMessage = {
@@ -120,11 +125,6 @@ export const ChatbotProvider: React.FC<{ children: ReactNode }> = ({ children })
     setMessages([]);
     addMessage(t('chatbotWelcome'), 'bot');
   };
-
-  // Initialize with welcome message - using useEffect instead of useState
-  useEffect(() => {
-    addMessage(t('chatbotWelcome'), 'bot');
-  }, []);
 
   return (
     <ChatbotContext.Provider value={{ messages, isChatOpen, addMessage, toggleChat, clearChat }}>
