@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - JeevanRakshak</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+      color: #333;
+      text-align: center;
+      padding: 1rem;
+    }
+    .container {
+      max-width: 600px;
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #0EA5E9;
+      margin-bottom: 1rem;
+    }
+    .offline-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .cached-content {
+      text-align: left;
+      margin-top: 2rem;
+    }
+    .cached-content h2 {
+      color: #10B981;
+      font-size: 1.25rem;
+    }
+    .firstaid-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .firstaid-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+    .firstaid-list li a {
+      color: #0EA5E9;
+      text-decoration: none;
+      display: block;
+    }
+    .reconnect-btn {
+      margin-top: 2rem;
+      background-color: #0EA5E9;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="offline-icon">📶</div>
+    <h1>You're Offline</h1>
+    <p>You appear to be offline. Don't worry! You can still access essential first aid information.</p>
+    
+    <div class="cached-content">
+      <h2>Available First Aid Guides:</h2>
+      <ul class="firstaid-list">
+        <li><a href="/firstaid/cpr">CPR (Cardiopulmonary Resuscitation)</a></li>
+        <li><a href="/firstaid/bleeding">Controlling Bleeding</a></li>
+        <li><a href="/firstaid/burns">Burns Treatment</a></li>
+        <li><a href="/firstaid/choking">Choking Response</a></li>
+        <li><a href="/firstaid/fractures">Fracture Care</a></li>
+        <li><a href="/firstaid/seizures">Seizure Management</a></li>
+        <li><a href="/firstaid/heart-attack">Heart Attack Response</a></li>
+        <li><a href="/firstaid/stroke">Stroke Recognition & Response</a></li>
+      </ul>
+    </div>
+    
+    <button class="reconnect-btn" onclick="window.location.reload()">Try Reconnecting</button>
+  </div>
+</body>
+</html>
